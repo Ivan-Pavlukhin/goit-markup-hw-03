@@ -260,8 +260,7 @@ footer {
 .filter-list {
   display: flex;
   justify-content: center;
-
-  padding-bottom: 56px;
+  padding-top: 94px;
 }
 
 .filter-list .item:not(:last-child) {
@@ -270,14 +269,20 @@ footer {
 
 .projects {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-
+  padding-top: 56px;
   padding-bottom: 94px;
 }
 
-.projects .item:not(:nth-child(3n)) {
-  margin-right: 30px;
+.projects .item {
+  /* width: calc((100%-60px) / 3); */
+  border: 1px solid #eeeeee;
 }
+
+/* .projects .item:not(:nth-child(3n)) {
+  margin-right: 30px; 
+}*/
 
 .projects .item:not(:nth-child(n + 7)) {
   margin-bottom: 30px;
@@ -307,6 +312,8 @@ footer {
 }
 
 .projects .title {
+  padding-bottom: 4px;
+  padding-left: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -315,6 +322,8 @@ footer {
 }
 
 .projects .text {
+  padding-bottom: 20px;
+  padding-left: 24px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
