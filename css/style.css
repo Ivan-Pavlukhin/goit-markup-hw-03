@@ -20,9 +20,9 @@ body {
   letter-spacing: 0.03em;
 }
 /* сброс отступа спискам */
-ul {
+/* ul {
   padding-left: 0;
-}
+} */
 
 .container {
   max-width: 1200px;
@@ -36,15 +36,15 @@ ul {
   list-style-type: none;
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 0;
 }
 
-a {
+.link {
   text-decoration: none;
 }
 
-h2,
-h3,
-p {
+.title,
+.text {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -80,12 +80,15 @@ p {
 
 /* logo */
 .logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
-.logo.accent {
+.link.logo.accent {
   color: var(--accent-color);
 }
 .logo .black {
@@ -98,25 +101,23 @@ p {
 
 /* links header*/
 
-.header-link {
+.header.link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   color: var(--title-text-color);
 }
 
-.header-link,
-.header-link.contacts {
+.header.link,
+.header.link.contacts {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.header-link:hover,
-.header-link:focus,
-.header-link.contacts:hover,
-.header-link.contacts:focus {
+.header.link:hover,
+.header.link:focus,
+.header.link.contacts:hover,
+.header.link.contacts:focus {
   color: var(--accent-color);
 }
 
@@ -131,6 +132,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1600px;
+  height: 600px;
   margin-right: auto;
   margin-left: auto;
 
@@ -142,20 +144,29 @@ p {
   text-transform: uppercase;
 }
 
-.hero-title {
-  margin-top: 0;
-  margin-bottom: 0;
+.hero .title {
+  display: block;
   padding-top: 200px;
-  padding-bottom: 20px;
 
   color: var(--primary-white-color);
+
+  /* height: 120px; */
+  /* left: 452px;
+  top: 280px; */
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .button {
   display: inline-block;
   padding: 10px 32px;
-  margin-bottom: 200px;
-
+  margin-top: 30px;
   border-radius: 4px;
 
   color: var(--primary-white-color);
@@ -225,10 +236,14 @@ p {
 .our-team .title {
   padding-bottom: 50px;
 }
-.our-team-items {
+.our-team .item {
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
-.our-team .item-title {
+.our-team .title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -241,7 +256,7 @@ p {
 .our-team .text {
   font-size: 16px;
   line-height: 1.19;
-
+  text-align: center;
   padding-bottom: 30px;
 }
 
@@ -258,13 +273,17 @@ p {
   margin-top: 20px;
 }
 
+.link.italic {
+  font-style: italic;
+}
+
 .us-contact {
   color: rgba(250, 250, 250, 0.6);
   display: inline-block;
   margin-top: 9px;
 }
 
-footer {
+.footer {
   background-color: #2f303a;
 }
 
@@ -280,7 +299,17 @@ footer {
   margin-right: 8px;
 }
 
+/* .filter-list .item {
+  padding-right: 0;
+  padding-left: 0;
+} */
+
 .button-filter {
+  text-align: center;
+
+  padding-right: 0;
+  padding-left: 0;
+
   background: #f5f4fa;
   border-radius: 4px;
   border: none;
@@ -320,14 +349,13 @@ footer {
 
 .projects {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 56px;
+  padding-top: 50px;
   padding-bottom: 94px;
 }
 
 .projects .item {
-  width: calc((100% - 60px) / 3);
+  width: 370px;
   border: 1px solid #eeeeee;
 }
 
@@ -362,9 +390,15 @@ footer {
   background-color: var(--accent-color);
 } */
 
+.projects .picture {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .projects .title {
-  padding-bottom: 4px;
-  padding-left: 24px;
+  width: 320px;
+  margin-bottom: 4px;
+  margin-left: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -373,11 +407,12 @@ footer {
 }
 
 .projects .text {
-  padding-bottom: 20px;
-  padding-left: 24px;
+  width: 320px;
+  margin-bottom: 20px;
+  margin-left: 24px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
-
+  color: var(--primary-text-color);
   letter-spacing: 0.03em;
 }
