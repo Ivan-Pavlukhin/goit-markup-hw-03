@@ -317,13 +317,13 @@ footer {
 }
 
 .projects .item {
-  /* flex-basis: calc((100%-60px) / 3); */
+  width: calc((100% - 60px) / 3);
   border: 1px solid #eeeeee;
 }
 
-/* .projects .item:not(:nth-child(3n)) {
-  margin-right: 30px; 
-}*/
+.projects .item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
 
 .projects .item:not(:nth-child(n + 7)) {
   margin-bottom: 30px;
