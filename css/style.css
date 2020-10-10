@@ -389,10 +389,12 @@ body {
   color: #ffffff;
   background-color: var(--accent-color);
 } */
-
+.projects .link {
+  display: contents;
+}
 .projects .picture {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .projects .title {
