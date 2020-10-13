@@ -271,10 +271,7 @@ body {
   color: var(--primary-white-color);
   display: inline-block;
   margin-top: 20px;
-}
-
-.link.italic {
-  font-style: italic;
+  font-style: normal;
 }
 
 .us-contact {
